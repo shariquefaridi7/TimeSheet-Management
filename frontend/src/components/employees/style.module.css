@@ -52,6 +52,8 @@
           .table {
             overflow-x: auto; /* Enable horizontal scrolling for smaller screens */
             border: 1px solid #045757;
+            border-radius: 5px;
+            margin-top:1rem
           }
           
           table {

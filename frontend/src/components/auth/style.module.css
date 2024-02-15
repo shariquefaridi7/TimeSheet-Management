@@ -1,36 +1,35 @@
-
-
 .form {
-    max-width: 400px; /* Adjust maximum width as needed */
-    margin: auto; /* Center the form horizontally */
-    border: 2px solid black;
-    padding: 2rem;
-    border-radius: 10px;
-    box-sizing: border-box;
-    background-color: #045757;
-    border: 1px solid #045757;
-  }
-  
-  .input{
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-  }
-  
-  .submit {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: green;
-    color: white;
-    cursor: pointer;
-  }
-  
-  .submit:hover {
-    background-color: darkgreen;
-  }
-  
+  max-width: 400px; /* Adjust maximum width as needed */
+  margin: auto; /* Center the form horizontally */
+  border: 2px solid black;
+  padding: 2rem;
+  border-radius: 10px;
+  padding-top: 0rem;
+  margin-top: 2rem;
+  box-sizing: border-box;
+  background-color: #045757;
+  border: 1px solid #045757;
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.submit {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: green;
+  color: white;
+  cursor: pointer;
+}
+
+.submit:hover {
+  background-color: darkgreen;
+}

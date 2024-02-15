@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import style from "./style.module.css";
 
@@ -31,8 +31,9 @@ const Auth = () => {
   return (
     <div>
       <center>
-        <h2>Authencation</h2>
+
         <div className={style.form}>
+          <h1 style={{ color: "white" }}>Admin Panel</h1>
           <input
             type="text"
             placeholder="Enter Email "

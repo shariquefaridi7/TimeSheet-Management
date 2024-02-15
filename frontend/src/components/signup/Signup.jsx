@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import axios from "axios";
 import style from "./style.module.css";
 import { NavLink, useNavigate } from "react-router-dom";
@@ -31,8 +31,9 @@ const Signup = () => {
   return (
     <div>
       <center>
-        <h2>Create Account</h2>
+
         <div className={style.form}>
+          <h1 style={{ color: "white" }}>Create Account</h1>
           <input
             type="text"
             placeholder="Enter Name "
@@ -71,7 +72,7 @@ const Signup = () => {
             to={"/login"}
             style={{ textDecoration: "none", color: "black" }}
           >
-            <p>Already an account</p>
+            <p style={{ color: "white" }}>Already an account</p>
           </NavLink>
         </div>
       </center>
