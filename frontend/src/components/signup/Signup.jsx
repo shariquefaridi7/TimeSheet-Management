@@ -19,7 +19,7 @@ const Signup = () => {
 
   const handelSubmit = async (e) => {
     e.preventDefault();
-    const resData = await axios.post("http://localhost:4000/signup", data);
+    const resData = await axios.post("https://time-sheet-management-api.vercel.app/signup", data);
     alert(resData.data.message);
     setData({ name: "", email: "", pass: "" });
     if (resData.data.message == "SignUp Successfull") {
