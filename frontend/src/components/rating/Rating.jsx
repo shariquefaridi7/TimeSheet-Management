@@ -10,7 +10,7 @@ const Rating = () => {
 
   const handelSubmit = async (id, rating) => {
     const resData = await axios.put(
-      `http://localhost:4000/timeSheet/rating/${id}`,
+      `https://time-sheet-management-api.vercel.app/timeSheet/rating/${id}`,
       { rating }
     );
 
@@ -21,7 +21,7 @@ const Rating = () => {
   const Navigate = useNavigate();
   useEffect(() => {
     const fetch = async () => {
-      const getData = await axios.get(`http://localhost:4000/timeSheet`);
+      const getData = await axios.get(`https://time-sheet-management-api.vercel.app/timeSheet`);
 
       setFetch(getData.data);
     };
