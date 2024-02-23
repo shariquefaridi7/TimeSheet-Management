@@ -7,7 +7,7 @@ import sheetRoute from './routes/TimeSheet.js';
 const app = express();
 app.use(cors(
   {
-    origin:["https://time-sheet-management-zeta.vercel.app/"],
+    origin:["https://time-sheet-management-zeta.vercel.app"],
     methods:["POST","GET"],
     credentials:true
   }
