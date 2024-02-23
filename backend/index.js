@@ -5,7 +5,13 @@ import empInfoRoute from "./routes/EmpInfo.js";
 import sheetRoute from './routes/TimeSheet.js';
 
 const app = express();
-app.use(cors());
+app.use(cors(
+  {
+    origin:["https://time-sheet-management-zeta.vercel.app"],
+    methods:["POST","GET","PUT","DELETE"],
+    credentials:true
+  }
+));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 const PORT = 4000;
