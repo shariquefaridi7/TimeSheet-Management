@@ -16,7 +16,19 @@ const Employees = () => {
   const [update, setUpdate] = useState(false);
   const [id, setId] = useState();
   const Navigate = useNavigate();
+  
+   useEffect(() => {
+    const fetch = async () => {
+      const userId = localStorage.getItem("id");
+      const getData = await axios.get(
+        `https://time-sheet-management-api.vercel.app/timeSheet/${userId}`
+      );
 
+      setFetch(getData.data);
+    };
+    fetch();
+  }, [update]);
+  
   const handelChange = (e) => {
     const { name, value } = e.target;
     if (name == "depart") {
@@ -37,14 +49,14 @@ const Employees = () => {
     const userId = localStorage.getItem("id");
     if (!update) {
       const resData = await axios.post(
-        `http://localhost:4000/timeSheet/${userId}`,
+        `https://time-sheet-management-api.vercel.app/timeSheet/${userId}`,
         data
       );
       alert(resData.data.message);
       const getData = await axios.get(
-        `http://localhost:4000/timeSheet/${userId}`
+        `https://time-sheet-management-api.vercel.app/timeSheet/${userId}`
       );
-      console.log(getData);
+   
       setFetch(getData.data);
     } else {
       const resData = await axios.put(
@@ -74,17 +86,7 @@ const Employees = () => {
     Navigate("/");
   };
 
-  useEffect(() => {
-    const fetch = async () => {
-      const userId = localStorage.getItem("id");
-      const getData = await axios.get(
-        `http://localhost:4000/timeSheet/${userId}`
-      );
-
-      setFetch(getData.data);
-    };
-    fetch();
-  }, [update]);
+ 
 
   return (
     <div>
