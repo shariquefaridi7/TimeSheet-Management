@@ -48,7 +48,7 @@ const Employees = () => {
       setFetch(getData.data);
     } else {
       const resData = await axios.put(
-        `http://localhost:4000/timeSheet/${id}`,
+        `https://time-sheet-management-api.vercel.app/timeSheet/${id}`,
         data
       );
       alert(resData.data.message);
