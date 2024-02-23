@@ -8,7 +8,7 @@ const app = express();
 app.use(cors(
   {
     origin:["https://time-sheet-management-zeta.vercel.app/"],
-    methods:["POST","GET","PUT","DELETE"],
+    methods:["POST","GET"],
     credentials:true
   }
 ));
