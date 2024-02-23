@@ -17,7 +17,7 @@ const Login = () => {
 
   const handelSubmit = async (e) => {
     e.preventDefault();
-    const resData = await axios.post("http://localhost:4000/login", data);
+    const resData = await axios.post("https://time-sheet-management-api.vercel.app/login", data);
     console.log(resData);
     if (resData.data.message == "Login Successfull") {
       alert("Welcome back " + resData.data.resData.empName);
